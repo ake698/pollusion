@@ -3,6 +3,21 @@ from django.db import models
 # Create your models here.
 
 
+
+
+class UserManager(models.Model):
+    id = models.AutoField(primary_key=True,max_length=10,verbose_name="ID")
+    username = models.CharField(max_length=10,verbose_name="账号")
+    password = models.CharField(max_length=10,verbose_name="密码")
+
+    def __str__(self):
+        return self.username
+
+    class Meta:
+        verbose_name = "用户管理"
+        verbose_name_plural = "用户管理"
+
+
 class Airquality(models.Model):
     id = models.AutoField(primary_key=True,verbose_name="ID")
     date = models.DateField(verbose_name="日期")

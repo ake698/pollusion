@@ -68,6 +68,7 @@ def getInfo(url):
         dateTime_p = datetime.datetime.strptime(date,'%Y-%m-%d')
         if Airquality.objects.filter(date=dateTime_p):
             continue
+        print(date)
         Airquality.objects.create(date=dateTime_p,qualityLevel=level,AQI=AQI,PM25=PM25,PM10=PM10,SO2=SO2,NO2=NO2,
                       CO=CO,O3=O3).save()
         # data.append([date,level,AQI,PM10,PM25,SO2,NO2,CO,O3])
@@ -83,4 +84,4 @@ def main():
         sleep(2)
 
 
-main()
+# main()

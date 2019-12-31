@@ -5,5 +5,9 @@
       <secret-storage>master_key</secret-storage>
       <auth-required>false</auth-required>
     </data-source>
+    <data-source name="SQLite - identifier.sqlite" uuid="623c347b-0a96-4df3-9924-8ec34c376c11">
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+    </data-source>
   </component>
 </project>
